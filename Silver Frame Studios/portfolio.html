@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Frame Studios | Portfolio</title>
+    <meta name="description" content="Professional, stunning photography studio specializing in high-end portraits, landscapes, products, and weddings.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="silver">Silver</span><span>Frame</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i data-feather="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; min-height: 100vh;">
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container reveal-up">
+                <div class="section-header">
+                    <p class="subtitle">Featured Work</p>
+                    <h2>Our Masterpieces</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="fashion">
+                        <img src="assets/images/portfolio_1.png" alt="High Fashion Portrait">
+                        <div class="gallery-overlay">
+                            <h3>Vogue Noir</h3>
+                            <p>Fashion / Portrait</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="landscape">
+                        <img src="assets/images/portfolio_2.png" alt="Moody Landscape">
+                        <div class="gallery-overlay">
+                            <h3>Misty Peaks</h3>
+                            <p>Landscape / Architecture</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="product">
+                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Luxury Watch Product">
+                        <div class="gallery-overlay">
+                            <h3>Timepiece</h3>
+                            <p>Product / Commercial</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="wedding">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Wedding Silhouette">
+                        <div class="gallery-overlay">
+                            <h3>Eternity</h3>
+                            <p>Wedding / Events</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="silver">Silver</span><span>Frame</span>
+                </a>
+                <p>&copy; 2026 Silver Frame Studios. All rights reserved.</p>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        feather.replace();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

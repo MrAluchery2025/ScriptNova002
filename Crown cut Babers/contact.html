@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Cut Barbers | Contact & Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-content { padding-top: 8rem; min-height: 80vh; }
+        nav { background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); padding: 1rem 0; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">CROWN CUT<span>.</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="contact.html" class="btn btn-outline">Book Now</a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" class="btn btn-primary">Book Now</a></li>
+        </ul>
+    </div>
+
+    <div class="page-content">
+        <!-- Booking / Contact Section -->
+        <section id="contact" class="contact section-padding hidden">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section-title">Claim Your Throne.</h2>
+                        <p>Walk-ins are welcome, but appointments are highly recommended to secure your preferred time.</p>
+                        
+                        <div class="info-items">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>123 Barber Street, Luxury District<br>Cityville, ST 12345</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Hours</h4>
+                                    <p>Mon - Fri: 9:00 AM - 8:00 PM<br>Sat: 9:00 AM - 6:00 PM<br>Sun: Closed</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Contact</h4>
+                                    <p>+1 (555) 123-4567<br>bookings@crowncut.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-form glass-panel">
+                        <h3>Request Appointment</h3>
+                        <form action="#" method="POST" id="bookingForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <select id="service" required>
+                                        <option value="" disabled selected>Select Service</option>
+                                        <option value="haircut">Gentleman's Cut</option>
+                                        <option value="fade">Skin Fade</option>
+                                        <option value="shave">Hot Towel Shave</option>
+                                        <option value="beard">Beard Sculpting</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" id="date" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Confirm Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>CROWN CUT<span>.</span></h2>
+                    <p>Premium grooming for the modern gentleman.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Crown Cut Barbers. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

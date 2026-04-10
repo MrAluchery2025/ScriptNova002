@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Booking | Velvet Touch Salon</title>
+    <meta name="description" content="Book your appointment and get directions to Velvet Touch Salon.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">Velvet <span>Touch</span></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="page-header" style="background-image: linear-gradient(rgba(86, 28, 36, 0.9), rgba(86, 28, 36, 0.9)), url('https://images.unsplash.com/photo-1516975080661-46ab80bfb2b1?q=80&w=1587&auto=format&fit=crop'); background-size: cover; background-position: center;">
+        <h1>Get in Touch</h1>
+        <p>Book your velvet experience</p>
+    </div>
+
+    <main class="section-padding">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Visit Us</h3>
+                
+                <div class="info-block">
+                    <h4>Address</h4>
+                    <p>123 Luxury Avenue, Suite 400<br>New York, NY 10012</p>
+                </div>
+                
+                <div class="info-block">
+                    <h4>Direct Contact</h4>
+                    <p>Phone: +1 (212) 555-0198</p>
+                    <p>Email: hello@velvettouchsalon.com</p>
+                </div>
+                
+                <div class="info-block">
+                    <h4>Hours of Operation</h4>
+                    <p>Tue - Fri: 9:00 AM - 8:00 PM</p>
+                    <p>Saturday: 9:00 AM - 6:00 PM</p>
+                    <p>Sun - Mon: Closed</p>
+                </div>
+                
+                <!-- Mock Map -->
+                <div style="margin-top: 3rem; width: 100%; height: 250px; background-color: #eee; display: flex; justify-content: center; align-items: center; border: 1px solid #ddd;">
+                    <img style="width: 100%; height:100%; object-fit: cover; opacity: 0.8;" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1474&auto=format&fit=crop" alt="Map Location">
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--primary-color); margin-bottom: 2rem;">Request an Appointment</h3>
+                <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will contact you soon.');">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; padding: 1rem; border: 1px solid #ddd; background-color: var(--bg-color); font-family: var(--font-body); font-size: 1rem;">
+                            <option value="">Select a Service...</option>
+                            <option value="cut">Haircut & Styling</option>
+                            <option value="color">Color & Highlights</option>
+                            <option value="treatment">Treatment</option>
+                            <option value="consult">Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" required style="width: 100%; padding: 1rem; border: 1px solid #ddd; background-color: var(--bg-color); font-family: var(--font-body); font-size: 1rem;">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Any special requests or details about your current hair?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>Velvet <span>Touch</span></h2>
+                <p style="margin-top: 1rem; line-height: 1.8;">Your sanctuary for luxury hair styling and premium beauty treatments.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">The Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact & Booking</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Opening Hours</h4>
+                <p>Tue - Fri: 9am - 8pm</p>
+                <p>Saturday: 9am - 6pm</p>
+                <p>Sunday & Monday: Closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Velvet Touch Salon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

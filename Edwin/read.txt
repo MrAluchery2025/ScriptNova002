@@ -1,0 +1,31 @@
+Model Interior Contractors Website Redesign
+
+This directory contains the completely redesigned website for Model Interior Contractors.
+
+Features:
+- Cutting-edge modern design utilizing a luxury dark theme with gold accents
+- Fully responsive on all devices
+- Micro-animations for dynamic user interactions
+- Clean, semantic HTML5 and vanilla CSS/JS implementation
+
+Files Included:
+- index.html: Main Home page and landing structure.
+- specialty.html: Dedicated page for company specialties.
+- services.html: Detailed services and solutions page.
+- about.html: Professional 'About Us' company overview.
+- contact-us.html: Interaction page with contact details and form.
+- styles.css: Shared premium aesthetic styling.
+- script.js: Interaction logic for navigation and UI.
+- read.txt: This information file.
+- assets/: Directory containing realistic images used across the site.
+
+To view the website, double-click the `index.html` file to open it in any modern web browser. No complex setup or build process is required.
+
+Images:
+High-quality, realistic placeholder images are now located in the `assets/` folder within this directory. The website is configured to use these relative paths, ensuring all images load correctly when you open `index.html` in any modern web browser. 
+
+Directory Structure for Images:
+- `assets/hero.png`: Main landing section image.
+- `assets/precast.png`: Section background for 'About Us' and Service card.
+- `assets/entertainment.png`: Service card image.
+- `assets/building.png`: Service card image.
