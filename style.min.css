@@ -1306,16 +1306,20 @@ footer {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(10, 10, 10, 0.95);
+    background:
+      radial-gradient(circle at top right, rgba(124, 58, 237, 0.18), transparent 32%),
+      radial-gradient(circle at top left, rgba(0, 240, 255, 0.1), transparent 28%),
+      linear-gradient(180deg, rgba(13, 18, 32, 0.92) 0%, rgba(7, 10, 18, 0.96) 100%);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
+    justify-content: flex-start;
+    gap: 3.1rem;
     z-index: 1050;
     border: none;
-    padding: 2rem;
+    padding: 7rem 1.5rem 2rem;
+    overflow-y: auto;
   }
 
   .nav-links.open {
@@ -1324,26 +1328,29 @@ footer {
   }
 
   .nav-links a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--text-primary);
-    padding: 1rem 2rem;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.7rem 1.6rem;
+    width: min(100%, 420px);
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.025));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
   .nav-links a:hover {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.06);
     color: var(--accent-primary);
   }
 
   .nav-links a.active {
-    background: transparent;
+    background: rgba(124, 58, 237, 0.12);
     color: var(--accent-primary);
     box-shadow: none;
-    border-bottom-color: var(--accent-primary);
+    border-color: rgba(124, 58, 237, 0.45);
   }
 
   .mobile-menu-btn {
@@ -1545,6 +1552,50 @@ footer {
   grid-template-columns: 1fr;
 }
 
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.faq-item,
+.legal-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 2rem;
+  transition: var(--transition-smooth);
+}
+
+.faq-item:hover,
+.legal-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.faq-item h3,
+.legal-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.faq-item p,
+.legal-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.legal-content {
+  padding-top: 4rem;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
 /* --- Form Success State --- */
 .form-success {
   text-align: center;
@@ -1607,12 +1658,19 @@ footer {
   .page-hero { padding: 9rem 1.5rem 4rem; }
   .cta-banner { padding: 5rem 1.5rem; }
   .client-logos-grid { grid-template-columns: repeat(2, 1fr); }
+  .faq-grid,
+  .legal-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-bottom {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
+}
+
+.mobile-menu-btn:focus-visible {
+  outline: 2px solid var(--secondary-accent);
+  outline-offset: 3px;
 }
 
 /* --- Package / Pricing Cards --- */
