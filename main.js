@@ -75,46 +75,7 @@ const portfolioEvidence = [
   },
   // Mock Projects for beta_mode demo
   ...(betaMode ? [
-    {
-      id: 'fintech-dash',
-      cls: 'fintech',
-      img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop',
-      alt: 'Fintech Dashboard',
-      tag: 'Fintech Platform',
-      title: 'NeoBank Dashboard',
-      href: '#',
-      aria: 'Fintech demo (mock)',
-      desc: 'Real-time analytics dashboard for fintech startup, handling 10k+ tx/sec with sub-50ms latency.',
-      tags: ['Fintech', 'Dashboard', 'React'],
-      metric: 'Latency -78ms'
-    },
-    {
-      id: 'luxury-ecomm',
-      cls: 'ecommerce',
-      img: 'https://images.unsplash.com/photo-1464475679067-ea5ff762b1bd?q=80&w=2070&auto=format&fit=crop',
-      alt: 'Luxury E-commerce',
-      tag: 'Luxury Retail',
-      title: 'Velour Collective',
-      href: '#',
-      aria: 'Luxury demo (mock)',
-      desc: 'Headless commerce for high-end fashion brand with personalized recommendations and AR try-on.',
-      tags: ['E-commerce', 'Luxury', 'Headless'],
-      metric: 'AOV +$240'
-    },
-    {
-      id: 'ai-interface',
-      cls: 'ai',
-      img: 'https://images.unsplash.com/photo-1687002947343-8329af74a065?q=80&w=2070&auto=format&fit=crop',
-      alt: 'AI Interface',
-      tag: 'AI Dashboard',
-      title: 'InsightAI Pro',
-      href: '#',
-      aria: 'AI demo (mock)',
-      desc: 'Conversational AI interface for enterprise analytics with natural language querying.',
-      tags: ['AI', 'SaaS', 'Dashboard'],
-      metric: 'Query speed 3.2s'
-    }
-  ] : [])
+    ] : [])
 ];
 
 // --- Dynamic Portfolio Render ---
@@ -151,10 +112,15 @@ const initPortfolio = () => {
   // Re-init touch overlay
   document.querySelectorAll('.portfolio-item').forEach(item => {
     item.addEventListener('touchend', (e) => {
-      e.preventDefault();
+      const link = e.target.closest('a');
+      if (link && item.contains(link)) return;
+
       const wasActive = item.classList.contains('touched');
       document.querySelectorAll('.portfolio-item.touched').forEach(i => i.classList.remove('touched'));
-      if (!wasActive) item.classList.add('touched');
+      if (!wasActive) {
+        item.classList.add('touched');
+        e.preventDefault();
+      }
     });
   });
 };
